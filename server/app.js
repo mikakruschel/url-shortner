@@ -17,7 +17,7 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(morgan('dev'));
 app.use(helmet());
-if (process.env.NODE_ENV == 'development') app.use(express.static('static'));
+// if (process.env.NODE_ENV == 'development') app.use(express.static('static'));
 
 app.use('/', router);
 // app.use('/api', apiRouter);
