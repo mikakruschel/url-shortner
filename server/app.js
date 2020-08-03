@@ -17,7 +17,7 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(morgan('dev'));
 app.use(helmet());
-app.use(express.static('./static'));
+app.use(express.static(`${__dirname}/static`));
 
 app.use('/', router);
 // app.use('/api', apiRouter);
