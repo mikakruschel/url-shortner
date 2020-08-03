@@ -1,6 +1,8 @@
 const express = require('express');
 const toAsyncRouter = require('async-express-decorator');
 const validator = require('validator');
+const rateLimit = require('express-rate-limit');
+const slowDown = require('express-slow-down');
 
 const { customAlphabet } = require('nanoid');
 
@@ -21,16 +23,30 @@ const db = admin.database();
 
 const router = toAsyncRouter(express.Router());
 
+router.get('/', async (req, res) => {
+  res.sendFile('index.html');
+});
+
+router.get('/404', async (req, res) => {
+  res.sendFile('404.html');
+});
+
 router.get('/:short', async (req, res) => {
   const { short } = req.params;
-  if (short == '404' && process.env.NODE_ENV == 'development') return res.redirect('404.html');
   // look short in firebase up
   const s = await findShort(short);
   if (!s || !s.long) return res.redirect('404');
   res.redirect(`${s.long.startsWith('http') ? '' : 'https://'}${s.long}`);
 });
 
-router.post('/url', async (req, res) => {
+router.post('/url', slowDown({
+  windowMs: 30 * 1000,
+  delayAfter: 1,
+  delayMs: 500,
+}), rateLimit({
+  windowMs: 30 * 1000,
+  max: 1,
+}), async (req, res) => {
   const long = req.body.long;
   let short = req.body.short;
   if (!long) return res.status(400).send({ message: 'Missing long url.' });
