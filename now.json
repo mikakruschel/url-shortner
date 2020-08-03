@@ -2,6 +2,9 @@
   "name": "url-shortner",
   "version": 2,
   "builds": [{
+    "src": "static/**",
+    "use": "@now/static"
+  }, {
     "src": "main.js",
     "use": "@now/node-server"
   }],
