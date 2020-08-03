@@ -14,8 +14,8 @@ document.querySelector('form').addEventListener('submit', e => {
   })
       .then(res => res.json())
       .then(data => {
-        if (data.errorMessage) {
-          respP.innerHTML = data.errorMessage || 'Unkown error';
+        if (data.message) {
+          respP.innerHTML = data.message || 'Unkown error';
           respP.classList.add('text-danger');
           respP.classList.remove('text-primary');
         } else {

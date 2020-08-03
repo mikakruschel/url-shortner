@@ -33,15 +33,15 @@ router.get('/:short', async (req, res) => {
 router.post('/url', async (req, res) => {
   const long = req.body.long;
   let short = req.body.short;
-  if (!long) return res.status(400).send({ errorMessage: 'Missing long url.' });
-  if (!validator.isURL(long)) return res.status(400).send({ errorMessage: 'Long should be an url.' });
+  if (!long) return res.status(400).send({ message: 'Missing long url.' });
+  if (!validator.isURL(long)) return res.status(400).send({ message: 'Long should be an url.' });
   if (!short) short = nanoid();
-  if (!validator.isAlphanumeric(short)) return res.status(400).send({ errorMessage: 'Short url should alphanumeric.' });
-  if (short.length < 3) return res.status(400).send({ errorMessage: 'Short url should be at least 3 characters long.' });
+  if (!validator.isAlphanumeric(short)) return res.status(400).send({ message: 'Short url should alphanumeric.' });
+  if (short.length < 3) return res.status(400).send({ message: 'Short url should be at least 3 characters long.' });
   //  check short doesn't exist
   short = short.toLowerCase();
   const s = await findShort(short);
-  if (s) return res.status(400).send({ errorMessage: 'Short url is already in use.' });
+  if (s) return res.status(400).send({ message: 'Short url is already in use.' });
 
   // save in db
   await db.ref('/').push({ short, long });
