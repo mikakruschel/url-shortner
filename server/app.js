@@ -6,7 +6,7 @@ const secure = require('ssl-express-www');
 require('dotenv').config();
 
 const middlewares = require('./middlewares');
-// const router = require('./router');
+const router = require('./router');
 // const apiRouter = require('./api');
 
 const app = express();
@@ -19,7 +19,7 @@ app.use(morgan('dev'));
 app.use(helmet());
 app.use(express.static('./static'));
 
-// app.use('/', router);
+app.use('/', router);
 // app.use('/api', apiRouter);
 
 app.use(middlewares.notFound);
