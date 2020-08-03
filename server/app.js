@@ -10,7 +10,7 @@ const middlewares = require('./middlewares');
 // const apiRouter = require('./api');
 
 const app = express();
-app.set('trust proxy', 1);
+// app.set('trust proxy', 1);
 
 app.use(secure);
 app.use(express.json());
