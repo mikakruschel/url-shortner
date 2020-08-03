@@ -9,7 +9,7 @@
       "src": "/",
       "dest": "/static/index.html"
     }, {
-      "src": "/(.+svg|.+png|.+ico|robots.txt)",
+      "src": "/(.+svg|.+png|.+css|.+js|.+ico|robots.txt)",
       "dest": "/static/$1"
     },
     {
