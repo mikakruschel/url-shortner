@@ -27,8 +27,11 @@
     "async-express-decorator": "^1.1.0",
     "dotenv": "^8.2.0",
     "express": "^4.17.1",
+    "firebase-admin": "^9.0.0",
     "helmet": "^4.0.0",
     "morgan": "^1.10.0",
-    "ssl-express-www": "^3.0.7"
+    "nanoid": "^3.1.12",
+    "ssl-express-www": "^3.0.7",
+    "validator": "^13.1.1"
   }
 }

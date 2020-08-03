@@ -12,6 +12,9 @@
       "src": "/",
       "dest": "/static/index.html"
     }, {
+      "src": "/404",
+      "dest": "/static/404.html"
+    }, {
       "src": "/(.+svg|.+png|.+css|.+js|.+ico|robots.txt)",
       "dest": "/static/$1"
     },
