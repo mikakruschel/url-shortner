@@ -6,7 +6,15 @@
     "use": "@now/node-server"
   }],
   "routes": [{
-    "src": "/.*",
-    "dest": "main.js"
-  }]
+      "src": "/",
+      "dest": "/static/index.html"
+    }, {
+      "src": "/(.+svg|.+png|.+ico|robots.txt)",
+      "dest": "/static/$1"
+    },
+    {
+      "src": "/(.*)",
+      "dest": "main.js"
+    }
+  ]
 }
