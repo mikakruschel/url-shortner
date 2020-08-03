@@ -8,9 +8,4 @@ router.get('/test', (req, res) => {
   // render(req, res, 'pages/index');
 });
 
-router.get('/404.png', (req, res) => {
-  res.send('404');
-  // render(req, res, 'pages/index');
-});
-
 module.exports = router;
