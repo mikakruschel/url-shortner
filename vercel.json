@@ -1,0 +1,20 @@
+{
+  "routes": [{
+    "src": "/api/url.js",
+    "methods": ["POST"],
+    "dest": "/api/url.js"
+  }, {
+    "src": "/",
+    "dest": "/index.html"
+  }, {
+    "src": "/404",
+    "dest": "/404.html"
+  }, {
+    "src": "/(.+svg|.+png|.+css|.+js|.+ico|robots.txt)",
+    "dest": "/$1"
+  }, {
+    "src": "/(?<short>[^/]*)",
+    "methods": ["GET"],
+    "dest": "/api/index.js?short=$short"
+  }]
+}

@@ -1,7 +1,7 @@
 const respP = document.querySelector('#responseP');
 
 document.querySelector('form').addEventListener('submit', e => {
-  fetch('/url', {
+  fetch('/api/url', {
     method: 'POST',
     headers: {
       Accept: 'application/json',
@@ -26,8 +26,8 @@ document.querySelector('form').addEventListener('submit', e => {
       })
       .catch(err => {
         respP.innerHTML = err.message || err || 'Unkown error';
-        respP.classList.add('text-primary');
-        respP.classList.remove('text-danger');
+        respP.classList.add('text-danger');
+        respP.classList.remove('text-primary');
       });
   e.preventDefault();
 });
