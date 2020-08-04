@@ -4,7 +4,7 @@
   "description": "",
   "main": "main.js",
   "scripts": {
-    "dev": "vercel dev"
+    "dev-server": "vercel dev"
   },
   "repository": {
     "type": "git",
