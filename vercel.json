@@ -10,7 +10,7 @@
     "src": "/404",
     "dest": "/404.html"
   }, {
-    "src": "/(.+svg|.+png|.+css|.+js|.+ico|robots.txt)",
+    "src": "/(.+\\.svg|.+\\.png|.+\\.css|.+\\.js|.+\\.ico|robots.txt)",
     "dest": "/$1"
   }, {
     "src": "/(?<short>[^/]*)",
