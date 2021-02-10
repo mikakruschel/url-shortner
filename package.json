@@ -17,15 +17,15 @@
   },
   "homepage": "https://github.com/mikakruschel/url-shortner#readme",
   "devDependencies": {
-    "eslint": "^7.5.0",
-    "eslint-config-airbnb-base": "^14.2.0",
-    "eslint-plugin-import": "^2.22.0",
-    "vercel": "^19.2.0"
+    "eslint": "^7.19.0",
+    "eslint-config-airbnb-base": "^14.2.1",
+    "eslint-plugin-import": "^2.22.1",
+    "vercel": "^21.2.3"
   },
   "dependencies": {
     "dotenv": "^8.2.0",
-    "firebase-admin": "^9.0.0",
-    "nanoid": "^3.1.12",
-    "validator": "^13.1.1"
+    "firebase-admin": "^9.4.2",
+    "nanoid": "^3.1.20",
+    "validator": "^13.5.2"
   }
 }
