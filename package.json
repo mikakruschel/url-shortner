@@ -23,7 +23,7 @@
     "vercel": "^21.2.3"
   },
   "dependencies": {
-    "dotenv": "^8.2.0",
+    "dotenv": "^10.0.0",
     "firebase-admin": "^9.4.2",
     "nanoid": "^3.1.20",
     "validator": "^13.5.2"
