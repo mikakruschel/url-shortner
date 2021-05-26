@@ -20,7 +20,7 @@
     "eslint": "^7.19.0",
     "eslint-config-airbnb-base": "^14.2.1",
     "eslint-plugin-import": "^2.22.1",
-    "vercel": "^21.2.3"
+    "vercel": "^23.0.0"
   },
   "dependencies": {
     "dotenv": "^8.2.0",
