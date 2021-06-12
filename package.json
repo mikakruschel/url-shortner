@@ -20,10 +20,10 @@
     "eslint": "^7.19.0",
     "eslint-config-airbnb-base": "^14.2.1",
     "eslint-plugin-import": "^2.22.1",
-    "vercel": "^21.2.3"
+    "vercel": "^23.0.0"
   },
   "dependencies": {
-    "dotenv": "^8.2.0",
+    "dotenv": "^10.0.0",
     "firebase-admin": "^9.4.2",
     "nanoid": "^3.1.20",
     "validator": "^13.5.2"
